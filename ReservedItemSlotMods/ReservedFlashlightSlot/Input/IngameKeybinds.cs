@@ -14,7 +14,10 @@ namespace ReservedFlashlightSlot.Input
         internal static IngameKeybinds Instance = new IngameKeybinds();
         internal static InputActionAsset GetAsset() => Instance.Asset;
 
-        [InputAction("<Keyboard>/f", Name = "[ReservedItemSlots]\nToggle flashlight")]
+        [InputAction("<Keyboard>/f", Name = "Toggle On/Off Flashlight")]
         public InputAction ToggleFlashlightHotkey { get; set; }
+
+        [InputAction("", Name = "Toggle Flashlight Slot")]
+        public InputAction ToggleFlashlightSlotHotkey { get; set; }
     }
 }

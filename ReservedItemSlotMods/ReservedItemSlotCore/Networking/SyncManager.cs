@@ -336,7 +336,6 @@ namespace ReservedItemSlotCore.Networking
 
                 Plugin.Log("Receiving sync for reserved item slot data: - Slot: " + itemSlotData.slotName + " Priority: " + itemSlotData.slotPriority + " Unlocked: " + unlockedSlot);
             }
-
             UpdateReservedItemsList();
             OnSyncedWithServer();
 
@@ -368,10 +367,10 @@ namespace ReservedItemSlotCore.Networking
                 playerData.hotbarSize = playerData.itemSlots.Length;
                 playerData.reservedHotbarStartIndex = playerData.hotbarSize;
             }
+            SessionManager.UnlockAllPendingItemSlots();
 
             if (!NetworkManager.Singleton.IsServer && hostHasMod)
                 RequestSyncHeldObjects();
-            SessionManager.UnlockAllPendingItemSlots();
         }
 
 

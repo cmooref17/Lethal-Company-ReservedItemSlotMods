@@ -7,14 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.InputSystem;
 
-namespace ReservedFlashlightSlot.Input
+namespace ReservedUtilitySlot.Input
 {
     internal class InputUtilsCompat
     {
         internal static InputActionAsset Asset { get { return IngameKeybinds.GetAsset(); } }
         internal static bool Enabled => Plugin.IsModLoaded("com.rune580.LethalCompanyInputUtils");
 
-        public static InputAction ToggleFlashlightHotkey => IngameKeybinds.Instance.ToggleFlashlightHotkey;
-        public static InputAction ToggleFlashlightSlotHotkey => IngameKeybinds.Instance.ToggleFlashlightSlotHotkey;
+        public static InputAction ToggleUtilitySlotHotkey => IngameKeybinds.Instance.ToggleUtilitySlotHotkey;
     }
 }

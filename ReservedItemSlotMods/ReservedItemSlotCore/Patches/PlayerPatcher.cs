@@ -498,6 +498,7 @@ namespace ReservedItemSlotCore.Patches
             if (resultInReservedSlots == switchToReservedItemSlot && (!resultInReservedSlots || __instance.ItemSlots[__result] != null))
                 return;
 
+
             int direction = forward ? 1 : -1;
             __result = __instance.currentItemSlot + direction;
             __result = __result < 0 ? __instance.ItemSlots.Length - 1 : (__result >= __instance.ItemSlots.Length ? 0 : __result);
@@ -506,7 +507,9 @@ namespace ReservedItemSlotCore.Patches
             if (!switchToReservedItemSlot)
             {
                 if (resultInReservedSlots)
+                {
                     __result = forward ? (playerData.reservedHotbarStartIndex + reservedHotbarSize) % __instance.ItemSlots.Length : playerData.reservedHotbarStartIndex - 1;
+                }
             }
             else
             {

@@ -1,0 +1,602 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\data\\reservedplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\data\\reservedplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\playerpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\playerpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|c:\\users\\cmoor\\source\\repos\\reserveditemslotmods\\reserveditemslotmods\\reserveditemslotcore\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\reservedhotbarmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\reservedhotbarmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\itemnamemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\itemnamemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\networking\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\networking\\syncmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F01B77D-BEDD-4E16-8C84-0FE8A214F7E5}|ReservedItemSlotMods\\ReservedUtilitySlot\\ReservedUtilitySlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedutilityslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F01B77D-BEDD-4E16-8C84-0FE8A214F7E5}|ReservedItemSlotMods\\ReservedUtilitySlot\\ReservedUtilitySlot.csproj|solutionrelative:reserveditemslotmods\\reservedutilityslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedweaponslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|solutionrelative:reserveditemslotmods\\reservedweaponslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedweaponslot\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|solutionrelative:reserveditemslotmods\\reservedweaponslot\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE884B5-DF4A-4DE6-9C64-47A2F13CDD7E}|ReservedItemSlotMods\\ReservedWalkieSlot\\ReservedWalkieSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedwalkieslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE884B5-DF4A-4DE6-9C64-47A2F13CDD7E}|ReservedItemSlotMods\\ReservedWalkieSlot\\ReservedWalkieSlot.csproj|solutionrelative:reserveditemslotmods\\reservedwalkieslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EAFC5E2-54C9-4370-B905-F45C087D8816}|ReservedItemSlotMods\\ReservedSprayPaintSlot\\ReservedSprayPaintSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedspraypaintslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EAFC5E2-54C9-4370-B905-F45C087D8816}|ReservedItemSlotMods\\ReservedSprayPaintSlot\\ReservedSprayPaintSlot.csproj|solutionrelative:reserveditemslotmods\\reservedspraypaintslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\syncalreadyheldobjectspatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\syncalreadyheldobjectspatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\data\\reserveditemslotdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\data\\reserveditemslotdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\data\\reserveditemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\data\\reserveditemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\maskedenemypatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\maskedenemypatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\dropreserveditempatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\dropreserveditempatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\data\\bonemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\data\\bonemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\terminalpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\terminalpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\mousescrollpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\mousescrollpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\input\\keybinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\input\\keybinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\reserveditemspatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\reserveditemspatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\patches\\hudpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\patches\\hudpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedflashlightslot\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|solutionrelative:reserveditemslotmods\\reservedflashlightslot\\config\\configsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedflashlightslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|solutionrelative:reserveditemslotmods\\reservedflashlightslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedflashlightslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|solutionrelative:reserveditemslotmods\\reservedflashlightslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\input\\keybinddisplaynames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\input\\keybinddisplaynames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EAFC5E2-54C9-4370-B905-F45C087D8816}|ReservedItemSlotMods\\ReservedSprayPaintSlot\\ReservedSprayPaintSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedspraypaintslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EAFC5E2-54C9-4370-B905-F45C087D8816}|ReservedItemSlotMods\\ReservedSprayPaintSlot\\ReservedSprayPaintSlot.csproj|solutionrelative:reserveditemslotmods\\reservedspraypaintslot\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F01B77D-BEDD-4E16-8C84-0FE8A214F7E5}|ReservedItemSlotMods\\ReservedUtilitySlot\\ReservedUtilitySlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedutilityslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F01B77D-BEDD-4E16-8C84-0FE8A214F7E5}|ReservedItemSlotMods\\ReservedUtilitySlot\\ReservedUtilitySlot.csproj|solutionrelative:reserveditemslotmods\\reservedutilityslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE884B5-DF4A-4DE6-9C64-47A2F13CDD7E}|ReservedItemSlotMods\\ReservedWalkieSlot\\ReservedWalkieSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedwalkieslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE884B5-DF4A-4DE6-9C64-47A2F13CDD7E}|ReservedItemSlotMods\\ReservedWalkieSlot\\ReservedWalkieSlot.csproj|solutionrelative:reserveditemslotmods\\reservedwalkieslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedweaponslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F7F7FC-9089-43AF-AF8F-9EAC4949B1E4}|ReservedItemSlotMods\\ReservedWeaponSlot\\ReservedWeaponSlot.csproj|solutionrelative:reserveditemslotmods\\reservedweaponslot\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\input\\inpututilscompat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\input\\inpututilscompat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reserveditemslotcore\\input\\ingamekeybinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBE2018-C69A-456D-81D4-EEEDED33E4C2}|ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedItemSlotCore.csproj|solutionrelative:reserveditemslotmods\\reserveditemslotcore\\input\\ingamekeybinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\reserveditemslotmods\\reservedflashlightslot\\patches\\flashlightpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{872ABD34-67AE-406E-BE49-172D4D463470}|ReservedItemSlotMods\\ReservedFlashlightSlot\\ReservedFlashlightSlot.csproj|solutionrelative:reserveditemslotmods\\reservedflashlightslot\\patches\\flashlightpatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MouseScrollPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MouseScrollPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MouseScrollPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MouseScrollPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MouseScrollPatcher.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T00:11:53.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\SessionManager.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\SessionManager.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\SessionManager.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\SessionManager.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAMwCgBAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T20:48:30.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SyncManager.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Networking\\SyncManager.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Networking\\SyncManager.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Networking\\SyncManager.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Networking\\SyncManager.cs",
+              "ViewState": "AQIAAAYBAAAAAAAAAAAAACcBAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T19:30:55.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TerminalPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\TerminalPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\TerminalPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\TerminalPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\TerminalPatcher.cs",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAwwN0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T17:49:55.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "KeybindDisplayNames.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\KeybindDisplayNames.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\KeybindDisplayNames.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\KeybindDisplayNames.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\KeybindDisplayNames.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwv0oAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:14:27.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "InputUtilsCompat.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\InputUtilsCompat.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\InputUtilsCompat.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\InputUtilsCompat.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\InputUtilsCompat.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:14:07.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\PluginInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:29:41.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConfigSettings.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Config\\ConfigSettings.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Config\\ConfigSettings.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Config\\ConfigSettings.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Config\\ConfigSettings.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAqwFYAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:16:14.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\PlayerPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\PlayerPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\PlayerPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\PlayerPatcher.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAApwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:12:01.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedSprayPaintSlot\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedSprayPaintSlot\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedSprayPaintSlot\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedSprayPaintSlot\\PluginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:27:31.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservedHotbarManager.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedHotbarManager.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedHotbarManager.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedHotbarManager.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\ReservedHotbarManager.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwKIAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:32:05.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Plugin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:29:25.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DropReservedItemPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\DropReservedItemPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\DropReservedItemPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\DropReservedItemPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\DropReservedItemPatcher.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAA2wHMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:05:07.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReservedPlayerData.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedPlayerData.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedPlayerData.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedPlayerData.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedPlayerData.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwCEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:11:34.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemNameMap.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\ItemNameMap.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\ItemNameMap.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\ItemNameMap.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\ItemNameMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T07:32:15.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConfigSettings.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\Config\\ConfigSettings.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedWeaponSlot\\Config\\ConfigSettings.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\Config\\ConfigSettings.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedWeaponSlot\\Config\\ConfigSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T22:43:07.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedWeaponSlot\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedWeaponSlot\\Plugin.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:16:32.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedUtilitySlot\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedUtilitySlot\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedUtilitySlot\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedUtilitySlot\\Plugin.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAowIEAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:24:14.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MaskedEnemyPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MaskedEnemyPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MaskedEnemyPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MaskedEnemyPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\MaskedEnemyPatcher.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAIBJwGEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:05:13.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWalkieSlot\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedWalkieSlot\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWalkieSlot\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedWalkieSlot\\Plugin.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABUAAABsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:21:26.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReservedItemData.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemData.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemData.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemData.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemData.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAIBJwCQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:05:21.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReservedItemSlotData.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemSlotData.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemSlotData.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemSlotData.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\ReservedItemSlotData.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAgwMYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:05:27.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SyncAlreadyHeldObjectsPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\SyncAlreadyHeldObjectsPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\SyncAlreadyHeldObjectsPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\SyncAlreadyHeldObjectsPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\SyncAlreadyHeldObjectsPatcher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:05:39.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Keybinds.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\Keybinds.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\Keybinds.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\Keybinds.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\Keybinds.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAowKAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:14:51.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedFlashlightSlot\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedFlashlightSlot\\PluginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:20:19.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IngameKeybinds.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\IngameKeybinds.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\IngameKeybinds.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\IngameKeybinds.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Input\\IngameKeybinds.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:13:17.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedUtilitySlot\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedUtilitySlot\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedUtilitySlot\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedUtilitySlot\\PluginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:44:10.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Plugin.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAwDgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:08:40.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BoneMap.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\BoneMap.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\BoneMap.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\BoneMap.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Data\\BoneMap.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAIBJwEMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:03:16.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ConfigSettings.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Config\\ConfigSettings.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Config\\ConfigSettings.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Config\\ConfigSettings.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Config\\ConfigSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T16:59:16.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ReservedItemsPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\ReservedItemsPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\ReservedItemsPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\ReservedItemsPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\ReservedItemsPatcher.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAD4vzIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T00:12:54.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HUDPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\HUDPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\HUDPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\HUDPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedItemSlotCore\\Patches\\HUDPatcher.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAIwI0AAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T19:23:44.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedWeaponSlot\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWeaponSlot\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedWeaponSlot\\PluginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:19:17.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWalkieSlot\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedWalkieSlot\\PluginInfo.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedWalkieSlot\\PluginInfo.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedWalkieSlot\\PluginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:21:20.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedSprayPaintSlot\\Plugin.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedSprayPaintSlot\\Plugin.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedSprayPaintSlot\\Plugin.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedSprayPaintSlot\\Plugin.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwFIAAACRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T18:27:40.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FlashlightPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Patches\\FlashlightPatcher.cs",
+              "RelativeDocumentMoniker": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Patches\\FlashlightPatcher.cs",
+              "ToolTip": "C:\\Users\\cmoor\\source\\repos\\ReservedItemSlotMods\\ReservedItemSlotMods\\ReservedFlashlightSlot\\Patches\\FlashlightPatcher.cs",
+              "RelativeToolTip": "ReservedItemSlotMods\\ReservedFlashlightSlot\\Patches\\FlashlightPatcher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:08:38.519Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

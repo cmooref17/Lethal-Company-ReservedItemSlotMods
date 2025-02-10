@@ -14,7 +14,10 @@ namespace ReservedWalkieSlot.Input
         internal static IngameKeybinds Instance = new IngameKeybinds();
         internal static InputActionAsset GetAsset() => Instance.Asset;
 
-        [InputAction("<Keyboard>/x", Name = "[ReservedItemSlots]\nActivate walkie")]
+        [InputAction("<Keyboard>/x", Name = "Activate Walkie")]
         public InputAction ActivateWalkieHotkey { get; set; }
+
+        [InputAction("", Name = "Toggle Walkie Slot")]
+        public InputAction ToggleWalkieSlotHotkey { get; set; }
     }
 }

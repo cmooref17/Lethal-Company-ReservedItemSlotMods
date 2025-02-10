@@ -99,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\ConfigSettings.cs" />
+    <Compile Include="Input\IngameKeybinds.cs" />
+    <Compile Include="Input\InputUtilsCompat.cs" />
+    <Compile Include="Input\Keybinds.cs" />
     <Compile Include="Patches\SprayPaintPatcher.cs" />
     <Compile Include="Patches\SprayPaintTweaks.cs" />
     <Compile Include="Plugin.cs" />

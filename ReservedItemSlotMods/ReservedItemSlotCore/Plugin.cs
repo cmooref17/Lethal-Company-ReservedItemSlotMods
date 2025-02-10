@@ -58,19 +58,16 @@ namespace ReservedItemSlotCore
         }
 
 
-        private void PatchAll()
+        void PatchAll()
         {
             IEnumerable<Type> types;
-            try
-            {
-                types = Assembly.GetExecutingAssembly().GetTypes();
-            }
-            catch (ReflectionTypeLoadException e)
-            {
-                types = e.Types.Where(t => t != null);
-            }
+            try { types = Assembly.GetExecutingAssembly().GetTypes(); }
+            catch (ReflectionTypeLoadException e) { types = e.Types.Where(t => t != null); }
             foreach (var type in types)
-                this._harmony.PatchAll(type);
+            {
+                try { this._harmony.PatchAll(type); }
+                catch { }
+            }
         }
 
 

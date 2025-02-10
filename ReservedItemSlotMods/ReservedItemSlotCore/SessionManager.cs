@@ -119,12 +119,19 @@ namespace ReservedItemSlotCore
                     if (insertIndex == -1)
                         insertIndex = unlockedReservedItemSlots.Count;
 
+                    for (int i = 0; i < unlockedReservedItemSlots.Count; i++)
+                    {
+                        var itemSlot = unlockedReservedItemSlots[i];
+                    }
+
                     unlockedReservedItemSlots.Insert(insertIndex, itemSlotData);
 
                     foreach (var playerData in ReservedPlayerData.allPlayerData.Values)
                     {
                         if (unlockedReservedItemSlots.Count == 1)
+                        {
                             playerData.reservedHotbarStartIndex = playerData.itemSlots.Length;
+                        }
 
                         int hotbarIndex = playerData.reservedHotbarStartIndex + insertIndex;
                         List<GrabbableObject> newItemSlots = new List<GrabbableObject>(playerData.itemSlots);

@@ -3,4 +3,4 @@
 **/.vs/
 *.zip
 *.7z
-*.csproj
+*.csproj.user

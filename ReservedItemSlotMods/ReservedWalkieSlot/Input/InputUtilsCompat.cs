@@ -15,5 +15,6 @@ namespace ReservedWalkieSlot.Input
         internal static bool Enabled => Plugin.IsModLoaded("com.rune580.LethalCompanyInputUtils");
 
         public static InputAction ActivateWalkieHotkey => IngameKeybinds.Instance.ActivateWalkieHotkey;
+        public static InputAction ToggleWalkieSlotHotkey => IngameKeybinds.Instance.ToggleWalkieSlotHotkey;
     }
 }

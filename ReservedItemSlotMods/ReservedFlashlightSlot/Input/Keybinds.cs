@@ -10,6 +10,7 @@ using ReservedItemSlotCore.Patches;
 using ReservedFlashlightSlot.Patches;
 using ReservedFlashlightSlot.Config;
 using ReservedItemSlotCore.Data;
+using ReservedItemSlotCore;
 
 namespace ReservedFlashlightSlot.Input
 {
@@ -17,11 +18,13 @@ namespace ReservedFlashlightSlot.Input
 	internal static class Keybinds
     {
         public static PlayerControllerB localPlayerController { get { return StartOfRound.Instance?.localPlayerController; } }
+        public static ReservedPlayerData localPlayerData { get { return ReservedPlayerData.localPlayerData; } }
 
         public static InputActionAsset Asset;
         public static InputActionMap ActionMap;
 
         static InputAction ActivateFlashlightAction;
+        static InputAction ToggleFlashlightSlotAction;
 
 
         [HarmonyPatch(typeof(PreInitSceneScript), "Awake")]
@@ -34,6 +37,7 @@ namespace ReservedFlashlightSlot.Input
                 Asset = InputUtilsCompat.Asset;
                 ActionMap = Asset.actionMaps[0];
                 ActivateFlashlightAction = InputUtilsCompat.ToggleFlashlightHotkey;
+                ToggleFlashlightSlotAction = InputUtilsCompat.ToggleFlashlightSlotHotkey;
             }
             else
             {
@@ -42,6 +46,7 @@ namespace ReservedFlashlightSlot.Input
                 Asset.AddActionMap(ActionMap);
 
                 ActivateFlashlightAction = ActionMap.AddAction("ReservedItemSlots.ToggleFlashlight", binding: "<keyboard>/f");
+                ToggleFlashlightSlotAction = ActionMap.AddAction("ReservedItemSlots.ToggleFlashlightSlot", binding: "");
             }
         }
 
@@ -52,6 +57,9 @@ namespace ReservedFlashlightSlot.Input
         {
             Asset.Enable();
             ActivateFlashlightAction.performed += OnActivateFlashlightPerformed;
+
+            ToggleFlashlightSlotAction.performed += OnSwapToFlashlightSlot;
+            ToggleFlashlightSlotAction.canceled += OnSwapToFlashlightSlot;
         }
 
 
@@ -61,6 +69,9 @@ namespace ReservedFlashlightSlot.Input
         {
             Asset.Disable();
             ActivateFlashlightAction.performed -= OnActivateFlashlightPerformed;
+
+            ToggleFlashlightSlotAction.performed -= OnSwapToFlashlightSlot;
+            ToggleFlashlightSlotAction.canceled -= OnSwapToFlashlightSlot;
         }
 
 
@@ -95,6 +106,16 @@ namespace ReservedFlashlightSlot.Input
 
             mainFlashlight.UseItemOnClient(activate);
             Traverse.Create(localPlayerController).Field("timeSinceSwitchingSlots").SetValue(0);
+        }
+
+
+        private static void OnSwapToFlashlightSlot(InputAction.CallbackContext context)
+        {
+            if (localPlayerController == null || localPlayerData == null || !localPlayerController.isPlayerControlled || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
+                return;
+
+            if (SessionManager.unlockedReservedItemSlotsDict.TryGetValue(Plugin.flashlightSlotData.slotName, out var flashlightSlotData))
+                ReservedHotbarManager.ForceToggleReservedHotbar(new ReservedItemSlotData[] { flashlightSlotData });
         }
     }
 }

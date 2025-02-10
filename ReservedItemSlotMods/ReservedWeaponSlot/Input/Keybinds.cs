@@ -25,8 +25,8 @@ namespace ReservedWeaponSlot.Input
         public static InputActionMap ActionMap;
 
         static InputAction ToggleWeaponSlotAction;
-        public static bool holdingWeaponModifier = false;
-        public static bool toggledWeaponSlot = false;
+        //public static bool holdingWeaponModifier = false;
+        //public static bool toggledWeaponSlot = false;
 
 
         [HarmonyPatch(typeof(PreInitSceneScript), "Awake")]

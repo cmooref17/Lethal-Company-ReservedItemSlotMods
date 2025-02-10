@@ -1,5 +1,6 @@
 ﻿using GameNetcodeStuff;
 using HarmonyLib;
+using ReservedItemSlotCore.Compatibility;
 using ReservedItemSlotCore.Config;
 using ReservedItemSlotCore.Data;
 using ReservedItemSlotCore.Networking;
@@ -37,7 +38,12 @@ namespace ReservedItemSlotCore.Patches
                     foreach (var renderer in __instance.GetComponentsInChildren<MeshRenderer>())
                     {
                         if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
-                            renderer.gameObject.layer = playerData.isLocalPlayer ? 23 : 6;
+                        {
+                            if (playerData.isLocalPlayer && (!TooManyEmotes_Compat.Enabled || !TooManyEmotes_Compat.IsLocalPlayerPerformingCustomEmote()))
+                                renderer.gameObject.layer = 23;
+                            else
+                                renderer.gameObject.layer = 6;
+                        }
                     }
                     __instance.parentObject = playerData.boneMap.GetBone(itemData.holsteredParentBone);
                     ForceEnableItemMesh(__instance, true);

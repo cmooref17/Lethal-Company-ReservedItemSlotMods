@@ -131,7 +131,8 @@ namespace ReservedItemSlotCore.Patches
                     {
                         flashlightItem.flashlightBulb.enabled = true;
                         flashlightItem.flashlightBulbGlow.enabled = true;
-                        flashlightItem.flashlightMesh.sharedMaterials[1] = flashlightItem.bulbLight;
+                        if (flashlightItem.flashlightMesh.sharedMaterials.Length > 1 && flashlightItem.bulbLight != null)
+                            flashlightItem.flashlightMesh.sharedMaterials[1] = flashlightItem.bulbLight;
                     }
                     ReservedItemsPatcher.ForceEnableItemMesh(grabbableObjectData, true);
                     grabbableObjectData.EnablePhysics(false);

@@ -10,6 +10,7 @@ using ReservedItemSlotCore.Patches;
 using ReservedWalkieSlot.Patches;
 using ReservedWalkieSlot.Config;
 using ReservedItemSlotCore.Data;
+using ReservedItemSlotCore;
 
 
 namespace ReservedWalkieSlot.Input
@@ -17,13 +18,14 @@ namespace ReservedWalkieSlot.Input
 	[HarmonyPatch]
 	internal static class Keybinds
     {
-
         public static PlayerControllerB localPlayerController { get { return StartOfRound.Instance?.localPlayerController; } }
+        public static ReservedPlayerData localPlayerData { get { return ReservedPlayerData.localPlayerData; } }
 
         public static InputActionAsset Asset;
         public static InputActionMap ActionMap;
 
         static InputAction ActivateWalkieAction;
+        static InputAction ToggleWalkieSlotAction;
 
 
         [HarmonyPatch(typeof(PreInitSceneScript), "Awake")]
@@ -36,6 +38,7 @@ namespace ReservedWalkieSlot.Input
                 Asset = InputUtilsCompat.Asset;
                 ActionMap = Asset.actionMaps[0];
                 ActivateWalkieAction = InputUtilsCompat.ActivateWalkieHotkey;
+                ToggleWalkieSlotAction = InputUtilsCompat.ToggleWalkieSlotHotkey;
             }
             else
             {
@@ -44,6 +47,7 @@ namespace ReservedWalkieSlot.Input
                 Asset.AddActionMap(ActionMap);
 
                 ActivateWalkieAction = ActionMap.AddAction("ReservedItemSlots.ActivateWalkie", binding: "<keyboard>/x");
+                ToggleWalkieSlotAction = ActionMap.AddAction("ReservedItemSlots.ToggleWalkieSlot", binding: "");
             }
         }
 
@@ -55,6 +59,9 @@ namespace ReservedWalkieSlot.Input
             Asset.Enable();
             ActivateWalkieAction.performed += OnPressWalkieButtonPerformed;
             ActivateWalkieAction.canceled += OnReleaseWalkieButtonPerformed;
+
+            ToggleWalkieSlotAction.performed += OnSwapToWalkieSlot;
+            ToggleWalkieSlotAction.canceled += OnSwapToWalkieSlot;
         }
 
 
@@ -65,6 +72,9 @@ namespace ReservedWalkieSlot.Input
             Asset.Disable();
             ActivateWalkieAction.performed -= OnPressWalkieButtonPerformed;
             ActivateWalkieAction.canceled -= OnReleaseWalkieButtonPerformed;
+
+            ToggleWalkieSlotAction.performed -= OnSwapToWalkieSlot;
+            ToggleWalkieSlotAction.canceled -= OnSwapToWalkieSlot;
         }
 
 
@@ -101,6 +111,16 @@ namespace ReservedWalkieSlot.Input
                 return;
 
             mainWalkie.UseItemOnClient(false);
+        }
+
+
+        private static void OnSwapToWalkieSlot(InputAction.CallbackContext context)
+        {
+            if (localPlayerController == null || localPlayerData == null || !localPlayerController.isPlayerControlled || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
+                return;
+
+            if (SessionManager.unlockedReservedItemSlotsDict.TryGetValue(Plugin.walkieSlotData.slotName, out var walkieSlotData))
+                ReservedHotbarManager.ForceToggleReservedHotbar(new ReservedItemSlotData[]{ walkieSlotData });
         }
     }
 }
