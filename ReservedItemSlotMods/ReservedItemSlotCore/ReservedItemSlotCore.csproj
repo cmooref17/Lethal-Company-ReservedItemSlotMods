@@ -46,6 +46,13 @@
     <Reference Include="GeneralImprovements">
       <HintPath>D:\Downloads\ShaosilGaming-GeneralImprovements-1.1.11\GeneralImprovements.dll</HintPath>
     </Reference>
+    <Reference Include="HotbarPlus">
+      <HintPath>..\..\..\HotbarPlus\HotbarPlus\bin\Debug\HotbarPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="LCVR, Version=1.3.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\LCVR\LCVR.dll</HintPath>
+    </Reference>
     <Reference Include="LethalCompanyInputUtils">
       <HintPath>D:\Downloads\Rune580-LethalCompany_InputUtils-0.4.4\LethalCompanyInputUtils\LethalCompanyInputUtils.dll</HintPath>
     </Reference>
@@ -105,6 +112,7 @@
     <Compile Include="Compatibility\GeneralImprovements_Patcher.cs" />
     <Compile Include="Compatibility\AdvancedCompany_Patcher.cs" />
     <Compile Include="Compatibility\HotbarPlus_Compat.cs" />
+    <Compile Include="Compatibility\LCVR_Compat.cs" />
     <Compile Include="Compatibility\TooManyEmotes_Compat.cs" />
     <Compile Include="Config\ConfigSettings.cs" />
     <Compile Include="Data\BoneMap.cs" />
@@ -136,6 +144,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)$(TargetName).dll" "C:\Users\cmoor\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\Flip\BepInEx\plugins\FlipMods-ReservedItemSlotCore\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y "$(TargetDir)$(TargetName).dll" "C:\Users\cmoor\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\Flip\BepInEx\plugins\FlipMods-ReservedItemSlotCore\"
+xcopy /Y "$(TargetDir)$(TargetName).dll" "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\BepInEx\plugins\FlipMods-ReservedItemSlotCore\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

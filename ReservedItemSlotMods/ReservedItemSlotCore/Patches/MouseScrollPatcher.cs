@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using GameNetcodeStuff;
 using HarmonyLib;
 using UnityEngine.InputSystem;
+using UnityEngine;
 using ReservedItemSlotCore.Input;
 using ReservedItemSlotCore.Networking;
 using ReservedItemSlotCore.Data;
 using ReservedItemSlotCore.Config;
-using UnityEngine;
+using ReservedItemSlotCore.Compatibility;
 
 
 namespace ReservedItemSlotCore.Patches
@@ -19,8 +20,6 @@ namespace ReservedItemSlotCore.Patches
     internal static class MouseScrollPatcher
     {
         public static PlayerControllerB localPlayerController { get { return StartOfRound.Instance?.localPlayerController; } }
-
-        private static bool scrollingItemSlots = false;
         private static float timeLoggedPreventedScroll = 0;
 
 
@@ -46,6 +45,9 @@ namespace ReservedItemSlotCore.Patches
         [HarmonyPrefix]
         public static bool PreventInvertedScrollingReservedHotbar(InputAction.CallbackContext context)
         {
+            if (LCVR_Compat.LoadedAndEnabled)
+                return true;
+
             if (StartOfRound.Instance.localPlayerUsingController || SessionManager.numReservedItemSlotsUnlocked <= 0 || HUDPatcher.reservedItemSlots == null || localPlayerController.inTerminalMenu)
                 return true;
 
@@ -65,14 +67,6 @@ namespace ReservedItemSlotCore.Patches
                 }
             }
             return true;
-        }
-
-
-        [HarmonyPatch(typeof(PlayerControllerB), "ScrollMouse_performed")]
-        [HarmonyPostfix]
-        public static void ScrollReservedItemSlots(InputAction.CallbackContext context)
-        {
-            scrollingItemSlots = false;
         }
     }
 }

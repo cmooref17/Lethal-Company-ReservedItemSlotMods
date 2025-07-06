@@ -192,7 +192,7 @@ namespace ReservedItemSlotCore.Patches
                 {
                     hudPosition.x = defaultItemSlotPosX + (defaultItemSlotSize.x - itemSlotWidth) / 2f;
                     hudPosition.y = defaultItemSlotPosY + 36 * (((itemSlotWidth / defaultItemSlotSize.x) - 1) / 2f) + itemSlotSpacing * positiveIndex;
-                    if (!ConfigSettings.hideEmptyReservedItemSlots.Value || reservedGrabbableObject != null)
+                    if (!ConfigSettings.hideEmptyReservedItemSlots.Value || reservedGrabbableObject != null || LCVR_Compat.Loaded)
                     {
                         if (!tooltipParent)
                             tooltipParent = itemSlotFrame.rectTransform;
@@ -205,7 +205,7 @@ namespace ReservedItemSlotCore.Patches
                 {
                     hudPosition.x = -defaultItemSlotPosX - (defaultItemSlotSize.x - itemSlotWidth) / 2f;
                     hudPosition.y = defaultItemSlotPosY + 36 * (((itemSlotWidth / defaultItemSlotSize.x) - 1) / 2f) + itemSlotSpacing * negativeIndex;
-                    if (!ConfigSettings.hideEmptyReservedItemSlots.Value || reservedGrabbableObject != null)
+                    if (!ConfigSettings.hideEmptyReservedItemSlots.Value || reservedGrabbableObject != null || LCVR_Compat.Loaded)
                         negativeIndex++;
                     else
                         hudPosition.y = -1000;
@@ -232,7 +232,7 @@ namespace ReservedItemSlotCore.Patches
                     hotkeyTooltip = new GameObject("ReservedItemSlotTooltip", new Type[] { typeof(RectTransform), typeof(TextMeshProUGUI) }).GetComponent<TextMeshProUGUI>();
 
                 RectTransform tooltipTransform = hotkeyTooltip.rectTransform;
-                tooltipTransform.parent = tooltipParent;
+                tooltipTransform.SetParent(tooltipParent);
                 if (tooltipParent)
                 {
                     tooltipTransform.localScale = Vector3.one;
@@ -282,6 +282,10 @@ namespace ReservedItemSlotCore.Patches
 
             //hotkeyTooltip.text = ConfigSettings.toggleFocusReservedHotbar.Value ? string.Format("Toggle: [{0}]", displayName) : string.Format("Hold: [{0}]", displayName);
             hotkeyTooltip.text = "";
+
+            if (LCVR_Compat.LoadedAndEnabled)
+                return;
+
             if (displayName != "")
                 hotkeyTooltip.text = string.Format("Hold: [{0}]", displayName);
             if (toggleDisplayName != "" && toggleDisplayName != displayName)

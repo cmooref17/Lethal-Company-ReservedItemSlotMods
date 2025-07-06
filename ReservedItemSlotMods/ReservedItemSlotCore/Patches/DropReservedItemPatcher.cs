@@ -27,16 +27,9 @@ namespace ReservedItemSlotCore.Patches
 
 
         [HarmonyPatch(typeof(PlayerControllerB), "SetObjectAsNoLongerHeld")]
-        [HarmonyPostfix]
-        private static void OnSetObjectNoLongerHeld(bool droppedInElevator, bool droppedInShipRoom, Vector3 targetFloorPosition, GrabbableObject dropObject, PlayerControllerB __instance)
-        {
-            OnDiscardItem(__instance);
-        }
-
-
         [HarmonyPatch(typeof(PlayerControllerB), "PlaceGrabbableObject")]
         [HarmonyPostfix]
-        private static void OnPlaceGrabbableObject(Transform parentObject, Vector3 positionOffset, bool matchRotationOfParent, GrabbableObject placeObject, PlayerControllerB __instance)
+        public static void OnObjectNoLongerHeld(PlayerControllerB __instance)
         {
             OnDiscardItem(__instance);
         }
@@ -44,16 +37,37 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(PlayerControllerB), "DestroyItemInSlot")]
         [HarmonyPostfix]
-        private static void OnDestroyItem(int itemSlot, PlayerControllerB __instance)
+        public static void OnDestroyItem(int itemSlot, PlayerControllerB __instance)
         {
-            if (__instance == localPlayerController && itemSlot >= ReservedPlayerData.localPlayerData.reservedHotbarStartIndex && itemSlot < ReservedPlayerData.localPlayerData.reservedHotbarEndIndexExcluded)
-                HUDPatcher.UpdateUI();
+            var localPlayerData = ReservedPlayerData.localPlayerData;
+            if (localPlayerData == null)
+            {
+                /*if (StartOfRound.Instance == null)
+                    Plugin.LogErrorVerbose("[OnItemDestroy] StartOfRound instance not set. This may cause problems. Likely caused from another mod? You might want to let Flip know :)");
+                else if (StartOfRound.Instance.localPlayerController == null)
+                    Plugin.LogErrorVerbose("[OnItemDestroy] localPlayerController object in StartOfRound not set. This may cause problems. You might want to let Flip know :) (This may be caused from another mod, or a new update)");
+                else
+                    Plugin.LogErrorVerbose("[OnItemDestroy] ReservedPlayerData for local player not initialized? You might want to let Flip know :) (This may be caused from another mod, or a new update)");*/
+                return;
+            }
+            if (SessionManager.unlockedReservedItemSlots == null)
+            {
+                Plugin.LogErrorVerbose("[OnItemDestroy] Unlocked reserved item slots no initialized? You might want to let Flip know :) (This may be caused from another mod, or a new update)");
+                return;
+            }
+            if (itemSlot >= ReservedPlayerData.localPlayerData.reservedHotbarStartIndex && itemSlot < ReservedPlayerData.localPlayerData.reservedHotbarEndIndexExcluded)
+            {
+                if (itemSlot == __instance.currentItemSlot)
+                    OnDiscardItem(__instance);
+                if (__instance == localPlayerController)
+                    HUDPatcher.UpdateUI();
+            }
         }
 
 
         [HarmonyPatch(typeof(PlayerControllerB), "DespawnHeldObjectOnClient")]
         [HarmonyPostfix]
-        private static void OnDespawnItem(PlayerControllerB __instance)
+        public static void OnDespawnItem(PlayerControllerB __instance)
         {
             if (__instance == localPlayerController)
                 HUDPatcher.UpdateUI();
@@ -62,7 +76,7 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(PlayerControllerB), "DropAllHeldItems")]
         [HarmonyPostfix]
-        private static void OnDropAllHeldItems(PlayerControllerB __instance)
+        public static void OnDropAllHeldItems(PlayerControllerB __instance)
         {
             if (__instance == localPlayerController)
                 HUDPatcher.UpdateUI();
@@ -105,7 +119,7 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(PlayerControllerB), "ScrollMouse_performed")]
         [HarmonyPrefix]
-        private static bool PreventItemSwappingDroppingItem(InputAction.CallbackContext context, PlayerControllerB __instance)
+        public static bool PreventItemSwappingDroppingItem(InputAction.CallbackContext context, PlayerControllerB __instance)
         {
             if (__instance == localPlayerController && playersDiscardingItems.Contains(__instance))
             {

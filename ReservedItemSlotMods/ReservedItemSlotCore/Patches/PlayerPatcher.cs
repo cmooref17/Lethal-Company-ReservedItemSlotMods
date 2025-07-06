@@ -24,7 +24,7 @@ namespace ReservedItemSlotCore.Patches
     {
         public static PlayerControllerB localPlayerController { get { return StartOfRound.Instance?.localPlayerController; } }
         public static Dictionary<PlayerControllerB, ReservedPlayerData> allPlayerData { get { return ReservedPlayerData.allPlayerData; } }
-        public static ReservedPlayerData localPlayerData { get { return ReservedPlayerData.localPlayerData; }  }
+        public static ReservedPlayerData localPlayerData { get { return ReservedPlayerData.localPlayerData; } }
 
         private static int INTERACTABLE_OBJECT_MASK = 0;
         public static int vanillaHotbarSize = 4;
@@ -150,7 +150,13 @@ namespace ReservedItemSlotCore.Patches
         }
 
 
-
+        /*[HarmonyPatch(typeof(PlayerControllerB), "DiscardHeldObject")]
+        [HarmonyPrefix]
+        private static void OnDiscardHeldObject(PlayerControllerB __instance, ref bool ___throwingObject, bool placeObject = false, NetworkObject parentObjectTo = null, Vector3 placePosition = default(Vector3), bool matchRotationOfParent = true)
+        {
+            if (placeObject)
+                ___throwingObject = true;
+        }*/
 
 
         [HarmonyPatch(typeof(PlayerControllerB), "BeginGrabObject")]
@@ -382,6 +388,9 @@ namespace ReservedItemSlotCore.Patches
         [HarmonyPrefix]
         private static void UpdateLastSelectedHotbarIndex(int slot, PlayerControllerB __instance)
         {
+            if (LCVR_Compat.LoadedAndEnabled && __instance == localPlayerController && LCVR_Compat.vrPlayerScrollingBetweenHotbars)
+                return;
+
             int currentSlot = __instance.currentItemSlot;
             if (ReservedPlayerData.allPlayerData.TryGetValue(__instance, out var playerData))
             {
@@ -397,6 +406,9 @@ namespace ReservedItemSlotCore.Patches
         [HarmonyPostfix]
         private static void UpdateFocusReservedHotbar(int slot, PlayerControllerB __instance)
         {
+            if (LCVR_Compat.LoadedAndEnabled && __instance == localPlayerController && LCVR_Compat.vrPlayerScrollingBetweenHotbars)
+                return;
+
             if (!HUDPatcher.hasReservedItemSlotsAndEnabled || !ReservedPlayerData.allPlayerData.TryGetValue(__instance, out var playerData))
                 return;
             
@@ -477,10 +489,14 @@ namespace ReservedItemSlotCore.Patches
             if (!ReservedPlayerData.allPlayerData.TryGetValue(__instance, out var playerData))
                 return;
 
+            if (LCVR_Compat.LoadedAndEnabled && __instance == localPlayerController && LCVR_Compat.vrPlayerScrollingBetweenHotbars)
+                return; // Handle this logic in LCVR_Compat
+
             // Prevent scrolling other hotbar
             // Skip empty item slots (in reserved hotbar)
             bool currentlyInReservedSlots = playerData.inReservedHotbarSlots;
             bool resultInReservedSlots = playerData.IsReservedItemSlot(__result);
+
 
             //bool inReservedHotbar = playerData.IsReservedItemSlot(__result);
             bool switchToReservedItemSlot = currentlyInReservedSlots;
@@ -514,11 +530,15 @@ namespace ReservedItemSlotCore.Patches
             else
             {
                 __result = !resultInReservedSlots ? (forward ? playerData.reservedHotbarStartIndex : playerData.reservedHotbarStartIndex + reservedHotbarSize - 1) : __result;
-                int numHeldReservedItems = playerData.GetNumHeldReservedItems();
-                while (numHeldReservedItems > 0 && __result != playerData.currentItemSlot && __instance.ItemSlots[__result] == null)
+                // Don't skip empty inventory slots if LCVR is enabled
+                if (!LCVR_Compat.Loaded)
                 {
-                    __result = __result + direction;
-                    __result = !playerData.IsReservedItemSlot(__result) ? (forward ? playerData.reservedHotbarStartIndex : playerData.reservedHotbarStartIndex + reservedHotbarSize - 1) : __result;
+                    int numHeldReservedItems = playerData.GetNumHeldReservedItems();
+                    while (numHeldReservedItems > 0 && __result != playerData.currentItemSlot && __instance.ItemSlots[__result] == null)
+                    {
+                        __result = __result + direction;
+                        __result = !playerData.IsReservedItemSlot(__result) ? (forward ? playerData.reservedHotbarStartIndex : playerData.reservedHotbarStartIndex + reservedHotbarSize - 1) : __result;
+                    }
                 }
             }
         }

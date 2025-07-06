@@ -19,11 +19,12 @@ namespace ReservedItemSlotCore.Patches
     {
         public static PlayerControllerB localPlayerController { get { return StartOfRound.Instance?.localPlayerController; } }
         public static bool ignoreMeshOverride = false;
+        internal static Dictionary<GameObject, int> previousObjectLayers = new Dictionary<GameObject, int>();
 
 
         [HarmonyPatch(typeof(GrabbableObject), "PocketItem")]
         [HarmonyPostfix]
-        private static void OnPocketReservedItem(GrabbableObject __instance)
+        public static void OnPocketReservedItem(GrabbableObject __instance)
         {
             if (!ConfigSettings.showReservedItemsHolstered.Value)
                 return;
@@ -37,12 +38,22 @@ namespace ReservedItemSlotCore.Patches
                 {
                     foreach (var renderer in __instance.GetComponentsInChildren<MeshRenderer>())
                     {
-                        if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
+                        if (!previousObjectLayers.TryGetValue(renderer.gameObject, out int originalLayer))
+                            originalLayer = renderer.gameObject.layer;
+                        if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && IsLayerInLocalCameraMask(originalLayer))
                         {
-                            if (playerData.isLocalPlayer && (!TooManyEmotes_Compat.Enabled || !TooManyEmotes_Compat.IsLocalPlayerPerformingCustomEmote()))
-                                renderer.gameObject.layer = 23;
+                            if (!previousObjectLayers.ContainsKey(renderer.gameObject))
+                                previousObjectLayers.Add(renderer.gameObject, originalLayer);
+                            if (playerData.isLocalPlayer && !(TooManyEmotes_Compat.Enabled && TooManyEmotes_Compat.IsLocalPlayerPerformingCustomEmote()))
+                            {
+                                if (IsLayerInLocalCameraMask(renderer.gameObject.layer))
+                                    renderer.gameObject.layer = 23;
+                            }
                             else
-                                renderer.gameObject.layer = 6;
+                            {
+                                if (!IsLayerInLocalCameraMask(renderer.gameObject.layer))
+                                    renderer.gameObject.layer = 6;
+                            }
                         }
                     }
                     __instance.parentObject = playerData.boneMap.GetBone(itemData.holsteredParentBone);
@@ -54,7 +65,7 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(GrabbableObject), "EquipItem")]
         [HarmonyPostfix]
-        private static void OnEquipReservedItem(GrabbableObject __instance)
+        public static void OnEquipReservedItem(GrabbableObject __instance)
         {
             if (!ConfigSettings.showReservedItemsHolstered.Value)
                 return;
@@ -68,8 +79,11 @@ namespace ReservedItemSlotCore.Patches
                 {
                     foreach (var renderer in __instance.GetComponentsInChildren<MeshRenderer>())
                     {
-                        if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
-                            renderer.gameObject.layer = 6;
+                        if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && previousObjectLayers.TryGetValue(renderer.gameObject, out int originalLayer))
+                        {
+                            renderer.gameObject.layer = originalLayer;
+                            previousObjectLayers.Remove(renderer.gameObject);
+                        }
                     }
                     __instance.parentObject = playerData.isLocalPlayer ? __instance.playerHeldBy.localItemHolder : __instance.playerHeldBy.serverItemHolder;
                 }
@@ -79,14 +93,17 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(GrabbableObject), "DiscardItem")]
         [HarmonyPostfix]
-        private static void ResetReservedItemLayer(GrabbableObject __instance)
+        public static void ResetReservedItemLayer(GrabbableObject __instance)
         {
             if (SessionManager.TryGetUnlockedItemData(__instance, out var itemData) && itemData.showOnPlayerWhileHolstered)
             {
                 foreach (var renderer in __instance.GetComponentsInChildren<MeshRenderer>())
                 {
-                    if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
-                        renderer.gameObject.layer = 6;
+                    if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && previousObjectLayers.TryGetValue(renderer.gameObject, out int originalLayer))
+                    {
+                        renderer.gameObject.layer = originalLayer;
+                        previousObjectLayers.Remove(renderer.gameObject);
+                    }
                 }
             }
         }
@@ -94,7 +111,7 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(GrabbableObject), "LateUpdate")]
         [HarmonyPostfix]
-        private static void SetHolsteredPositionRotation(GrabbableObject __instance)
+        public static void SetHolsteredPositionRotation(GrabbableObject __instance)
         {
             if (!ConfigSettings.showReservedItemsHolstered.Value)
                 return;
@@ -116,7 +133,7 @@ namespace ReservedItemSlotCore.Patches
 
         [HarmonyPatch(typeof(GrabbableObject), "EnableItemMeshes")]
         [HarmonyPrefix]
-        private static void OnEnableItemMeshes(ref bool enable, GrabbableObject __instance)
+        public static void OnEnableItemMeshes(ref bool enable, GrabbableObject __instance)
         {
             if (!ConfigSettings.showReservedItemsHolstered.Value)
                 return;
@@ -134,6 +151,15 @@ namespace ReservedItemSlotCore.Patches
         {
             ignoreMeshOverride = true;
             grabbableObject.EnableItemMeshes(enabled);
+        }
+
+
+        public static bool IsLayerInLocalCameraMask(int layer)
+        {
+            if (!localPlayerController || !localPlayerController.gameplayCamera)
+                return false;
+            int cullingMask = localPlayerController.gameplayCamera.cullingMask;
+            return (cullingMask & (1 << layer)) != 0;
         }
     }
 }

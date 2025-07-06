@@ -11,6 +11,7 @@ using ReservedItemSlotCore;
 using ReservedItemSlotCore.Data;
 using System;
 using System.Diagnostics.Eventing.Reader;
+using System.Linq;
 
 namespace ReservedFlashlightSlot.Patches
 {
@@ -33,8 +34,7 @@ namespace ReservedFlashlightSlot.Patches
         public static FlashlightItem GetReservedFlashlight(PlayerControllerB playerController) => SessionManager.TryGetUnlockedItemSlotData(Plugin.flashlightSlotData.slotName, out var itemSlot) && ReservedPlayerData.allPlayerData.TryGetValue(playerController, out var playerData) ? playerData.GetReservedItem(itemSlot) as FlashlightItem : null;
         public static FlashlightItem GetCurrentlySelectedFlashlight(PlayerControllerB playerController) => playerController.currentItemSlot >= 0 && playerController.currentItemSlot < playerController.ItemSlots.Length ? playerController?.ItemSlots[playerController.currentItemSlot] as FlashlightItem : null;
         public static FlashlightItem GetFirstFlashlightItem(PlayerControllerB playerController) { foreach (var item in playerController.ItemSlots) { if (item != null && item is FlashlightItem flashlightItem) return flashlightItem; } return null; }
-
-
+        //public static FlashlightItem GetFirstFlashlightItem(PlayerControllerB playerController) { FlashlightItem firstFlashlight = null; FlashlightItem firstNonLaserPointer = null; foreach (var item in playerController.ItemSlots) { if (item != null && item is FlashlightItem flashlightItem) { if (!firstFlashlight) firstFlashlight = flashlightItem; if (!firstNonLaserPointer && !(flashlightItem.itemProperties.name == "FlashLaserPointer" || flashlightItem.itemProperties.itemName == "Laser pointer")) firstNonLaserPointer = flashlightItem; } } return (firstNonLaserPointer ?? firstFlashlight); }
 
 
         [HarmonyPatch(typeof(FlashlightItem), "PocketItem")]
@@ -67,6 +67,17 @@ namespace ReservedFlashlightSlot.Patches
             var pocketedFlashlight = playerHeldBy.pocketedFlashlight as FlashlightItem;
             if (flashlightItem.isBeingUsed)
             {
+                /*if ((flashlightItem.itemProperties.name == "FlashLaserPointer" || flashlightItem.itemProperties.itemName == "Laser pointer") && pocketedFlashlight && pocketedFlashlight.isBeingUsed && !(pocketedFlashlight.itemProperties.name == "FlashLaserPointer" || pocketedFlashlight.itemProperties.itemName == "Laser pointer"))
+                {
+                    flashlightItem.SwitchFlashlight(false);
+                }
+                else
+                {
+                    if (pocketedFlashlight && pocketedFlashlight != flashlightItem)
+                        UpdateFlashlightState(pocketedFlashlight, false);
+                    UpdateFlashlightState(flashlightItem, true);
+                    playerHeldBy.pocketedFlashlight = flashlightItem;
+                }*/
                 if (pocketedFlashlight && pocketedFlashlight != flashlightItem)
                     UpdateFlashlightState(pocketedFlashlight, false);
                 UpdateFlashlightState(flashlightItem, true);
@@ -89,8 +100,10 @@ namespace ReservedFlashlightSlot.Patches
                 if (__instance.isBeingUsed)
                 {
                     UpdateFlashlightState(__instance, true);
-                    if (pocketedFlashlight)
+                    if (pocketedFlashlight /*&& !(__instance.itemProperties.name == "FlashLaserPointer" || __instance.itemProperties.itemName == "Laser pointer")*/)
+                    {
                         UpdateFlashlightState(pocketedFlashlight, false);
+                    }
                 }
                 else if (pocketedFlashlight && pocketedFlashlight.isBeingUsed)
                 {
@@ -160,7 +173,7 @@ namespace ReservedFlashlightSlot.Patches
             else
                 Traverse.Create(__instance).Field("previousPlayerHeldBy").SetValue(playerHeldBy);
 
-            if (pocketedFlashlight != null && pocketedFlashlight != __instance)
+            if (pocketedFlashlight != null && pocketedFlashlight != __instance/* && (!(__instance.itemProperties.name == "FlashLaserPointer" || __instance.itemProperties.itemName == "Laser pointer") || (pocketedFlashlight.itemProperties.name == "FlashLaserPointer" || pocketedFlashlight.itemProperties.itemName == "Laser pointer"))*/)
             {
                 if (pocketedFlashlight.isBeingUsed)
                 {
@@ -177,38 +190,23 @@ namespace ReservedFlashlightSlot.Patches
         }
 
 
-        /*internal static void UpdateAllFlashlightStates(PlayerControllerB playerController, bool mainFlashlightActive = true)
-        {
-            FlashlightItem mainFlashlight = GetMainFlashlight(playerController);
-            if (mainFlashlight == null)
-            {
-                playerController.helmetLight.enabled = false;
-                mainFlashlightActive = false;
-            }
-            else
-                playerController.ChangeHelmetLight(mainFlashlight.flashlightTypeID, mainFlashlightActive && playerController == localPlayerController && playerController.ItemSlots[playerController.currentItemSlot] != mainFlashlight);
-            
-            for (int i = 0; i < playerController.ItemSlots.Length; i++)
-            {
-                FlashlightItem flashlight = playerController.ItemSlots[i] as FlashlightItem;
-                if (flashlight != null)
-                    UpdateFlashlightState(flashlight, flashlight == mainFlashlight && mainFlashlightActive);
-            }
-        }*/
-
-
         internal static void UpdateFlashlightState(FlashlightItem flashlightItem, bool active)
         {
             var playerHeldBy = flashlightItem?.playerHeldBy;
             if (!playerHeldBy)
                 return;
 
+            //var pocketedFlashlight = playerHeldBy.pocketedFlashlight as FlashlightItem;
+
+            //bool isLaserPointer = (flashlightItem.itemProperties.name == "FlashLaserPointer" || flashlightItem.itemProperties.itemName == "Laser pointer");
             flashlightItem.isBeingUsed = active;
             bool useFlashlightLight = active && (flashlightItem == GetCurrentlySelectedFlashlight(playerHeldBy) || (playerHeldBy != localPlayerController && flashlightItem == GetReservedFlashlight(playerHeldBy)));
             bool useHelmetLight = active && !useFlashlightLight;
 
             flashlightItem.flashlightBulb.enabled = useFlashlightLight;
             flashlightItem.flashlightBulbGlow.enabled = useFlashlightLight;
+
+            //if (isLaserPointer && pocketedFlashlight == null) { }
             flashlightItem.usingPlayerHelmetLight = useHelmetLight;
             playerHeldBy.helmetLight.enabled = useHelmetLight;
             if (useHelmetLight)

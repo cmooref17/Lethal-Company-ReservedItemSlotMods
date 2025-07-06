@@ -10,6 +10,7 @@ using UnityEngine;
 using ReservedItemSlotCore.Patches;
 using ReservedItemSlotCore.Config;
 using ReservedItemSlotCore.Data;
+using ReservedItemSlotCore.Compatibility;
 
 
 namespace ReservedItemSlotCore.Input
@@ -72,7 +73,10 @@ namespace ReservedItemSlotCore.Input
             ToggleFocusReservedHotbarAction.performed += ToggleFocusReservedHotbarSlotsAction;
 
 			RawScrollAction.performed += OnScrollReservedHotbar;
-		}
+
+            if (LCVR_Compat.LoadedAndEnabled)
+                pressedToggleKey = true;
+        }
 
 
 		[HarmonyPatch(typeof(StartOfRound), "OnDisable")]
@@ -92,6 +96,8 @@ namespace ReservedItemSlotCore.Input
 
         private static void FocusReservedHotbarSlotsAction(InputAction.CallbackContext context)
 		{
+            if (LCVR_Compat.LoadedAndEnabled)
+                return;
             if (localPlayerController == null || !localPlayerController.IsOwner || !localPlayerController.isPlayerControlled || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
                 return;
             // If the player has no unlocked reserved item slots
@@ -115,12 +121,13 @@ namespace ReservedItemSlotCore.Input
 
         private static void UnfocusReservedHotbarSlotsPerformed(InputAction.CallbackContext context)
 		{
-			if (localPlayerController == null || !localPlayerController.IsOwner || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
+            if (LCVR_Compat.LoadedAndEnabled)
+                return;
+            if (localPlayerController == null || !localPlayerController.IsOwner || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
 				return;
 
 			holdingModifierKey = false;
             pressedToggleKey = false;
-
 
             if (context.performed && ReservedHotbarManager.CanSwapHotbars())
 			    ReservedHotbarManager.FocusReservedHotbarSlots(false);
@@ -129,6 +136,8 @@ namespace ReservedItemSlotCore.Input
 
         private static void ToggleFocusReservedHotbarSlotsAction(InputAction.CallbackContext context)
         {
+            if (LCVR_Compat.LoadedAndEnabled)
+                return;
             if (localPlayerController == null || !localPlayerController.IsOwner || !localPlayerController.isPlayerControlled || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
                 return;
 			// Don't toggle if we're currently holding to focus
@@ -160,7 +169,12 @@ namespace ReservedItemSlotCore.Input
 
         private static void OnScrollReservedHotbar(InputAction.CallbackContext context)
 		{
-			if (localPlayerController == null || !localPlayerController.IsOwner || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
+            if (LCVR_Compat.LoadedAndEnabled)
+                return;
+            if (TooManyEmotes_Compat.Enabled && TooManyEmotes_Compat.IsEmoteMenuOpen())
+                return;
+
+            if (localPlayerController == null || !localPlayerController.IsOwner || (localPlayerController.IsServer && !localPlayerController.isHostPlayerObject))
 				return;
 			if (!context.performed || localPlayerController.inTerminalMenu || ReservedPlayerData.localPlayerData.throwingObject || scrollingReservedHotbar || !ReservedPlayerData.localPlayerData.currentItemSlotIsReserved || ReservedPlayerData.localPlayerData.grabbingReservedItemData != null)
 				return;

@@ -80,6 +80,9 @@ namespace ReservedItemSlotCore
         public static void Log(string message) => logger.LogInfo(message);
         public static void LogError(string message) => logger.LogError(message);
         public static void LogWarning(string message) => logger.LogWarning(message);
+        public static void LogVerbose(string message) { if (ConfigSettings.verboseLogs.Value) logger.LogInfo("[VERBOSE] " + message); }
+        public static void LogErrorVerbose(string message) { if (ConfigSettings.verboseLogs.Value) logger.LogError("[VERBOSE] " + message); }
+        public static void LogWarningVerbose(string message) { if (ConfigSettings.verboseLogs.Value) logger.LogWarning("[VERBOSE] " + message); }
 
         public static bool IsModLoaded(string guid) => BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(guid);
     }

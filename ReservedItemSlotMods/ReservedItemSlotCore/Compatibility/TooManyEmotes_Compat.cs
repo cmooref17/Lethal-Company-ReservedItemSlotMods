@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using ReservedItemSlotCore.Data;
+using ReservedItemSlotCore.Patches;
 using TooManyEmotes;
 using TooManyEmotes.Patches;
 using UnityEngine;
@@ -18,10 +19,12 @@ namespace ReservedItemSlotCore.Compatibility
         }
 
         public static bool CanMoveWhileEmoting() => false; // ThirdPersonEmoteController.allowMovingWhileEmoting;
+        public static bool IsEmoteMenuOpen() => TooManyEmotes.UI.EmoteMenu.isMenuOpen;
+
 
         [HarmonyPatch(typeof(TooManyEmotes.Patches.ThirdPersonEmoteController), "OnStartCustomEmoteLocal")]
         [HarmonyPostfix]
-        private static void OnStartTMEEmote()
+        public static void OnStartTMEEmote()
         {
             var reservedPlayerData = ReservedPlayerData.localPlayerData;
             
@@ -41,17 +44,21 @@ namespace ReservedItemSlotCore.Compatibility
                     {
                         foreach (var renderer in grabbableObject.GetComponentsInChildren<MeshRenderer>())
                         {
-                            if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
-                                renderer.gameObject.layer = 6;
+                            if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && ReservedItemsPatcher.previousObjectLayers.TryGetValue(renderer.gameObject, out int originalLayer))
+                            {
+                                if (!ReservedItemsPatcher.IsLayerInLocalCameraMask(renderer.gameObject.layer))
+                                    renderer.gameObject.layer = originalLayer;
+                            }
                         }
                     }
                 }
             }
         }
 
+
         [HarmonyPatch(typeof(TooManyEmotes.Patches.ThirdPersonEmoteController), "OnStopCustomEmoteLocal")]
         [HarmonyPostfix]
-        private static void OnStopTMEEmote()
+        public static void OnStopTMEEmote()
         {
             var reservedPlayerData = ReservedPlayerData.localPlayerData;
 
@@ -68,8 +75,11 @@ namespace ReservedItemSlotCore.Compatibility
                     {
                         foreach (var renderer in grabbableObject.GetComponentsInChildren<MeshRenderer>())
                         {
-                            if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && renderer.gameObject.layer != 14 && renderer.gameObject.layer != 22)
-                                renderer.gameObject.layer = 23;
+                            if (!renderer.gameObject.CompareTag("DoNotSet") && !renderer.gameObject.CompareTag("InteractTrigger") && ReservedItemsPatcher.previousObjectLayers.TryGetValue(renderer.gameObject, out int originalLayer))
+                            {
+                                if (ReservedItemsPatcher.IsLayerInLocalCameraMask(renderer.gameObject.layer))
+                                    renderer.gameObject.layer = 23;
+                            }
                         }
                     }
                 }

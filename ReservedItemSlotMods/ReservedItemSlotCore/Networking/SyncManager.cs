@@ -360,7 +360,8 @@ namespace ReservedItemSlotCore.Networking
 
         private static IEnumerator OnSyncedWithServerDelayed()
         {
-            yield return new WaitForSeconds(3f);
+            //yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(0);
 
             foreach (var playerData in ReservedPlayerData.allPlayerData.Values)
             {
@@ -627,9 +628,9 @@ namespace ReservedItemSlotCore.Networking
             if (!NetworkManager.Singleton.IsServer)
                 return;
 
-            var writer = new FastBufferWriter(sizeof(short) + sizeof(uint), Allocator.Temp);
+            var writer = new FastBufferWriter(sizeof(short) + sizeof(ulong), Allocator.Temp);
             writer.WriteValueSafe((short)hotbarIndex);
-            writer.WriteValueSafe((uint)clientId);
+            writer.WriteValueSafe((ulong)clientId);
             NetworkManager.Singleton.CustomMessagingManager.SendNamedMessageToAll("ReservedItemSlotCore.OnSwapHotbarClientRpc", writer);
         }
 
@@ -641,7 +642,7 @@ namespace ReservedItemSlotCore.Networking
                 return;
 
             reader.ReadValue(out short hotbarIndex);
-            reader.ReadValue(out uint swappingClientId);
+            reader.ReadValue(out ulong swappingClientId);
 
             if (swappingClientId == localPlayerController.actualClientId)
                 return;
@@ -656,6 +657,7 @@ namespace ReservedItemSlotCore.Networking
 
         private static bool TryUpdateClientHotbarSlot(ulong clientId, int hotbarSlot)
         {
+            string strIds = "";
             for (int i = 0; i < StartOfRound.Instance.allPlayerScripts.Length; i++)
             {
                 var playerController = StartOfRound.Instance.allPlayerScripts[i];
@@ -664,7 +666,10 @@ namespace ReservedItemSlotCore.Networking
                     CallSwitchToItemSlotMethod(playerController, hotbarSlot);
                     return true;
                 }
+                strIds += " " + playerController.actualClientId;
             }
+            Plugin.LogErrorVerbose("Failed to find client with id: " + clientId + " while attempting to swap hotbar slots.");
+            Plugin.LogErrorVerbose("Valid user ids: " + strIds.Trim(' '));
             return false;
         }
 

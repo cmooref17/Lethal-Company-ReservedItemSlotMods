@@ -93,9 +93,11 @@ namespace ReservedItemSlotCore
             indexInHotbar = playerData.IsReservedItemSlot(indexInHotbar) ? 0 : indexInHotbar;
             indexInReservedHotbar = Mathf.Clamp(indexInReservedHotbar, playerData.reservedHotbarStartIndex, playerData.reservedHotbarEndIndexExcluded - 1);
 
+
             int currentIndex = Mathf.Clamp(localPlayerController.currentItemSlot, 0, localPlayerController.ItemSlots.Length);
             int newIndex = currentIndex;
             bool inReservedItemSlots = active;
+
 
             // Was not in reserved, now in reserved
             if (inReservedItemSlots && (!playerData.IsReservedItemSlot(currentIndex) || forceSlot != -1))
@@ -106,7 +108,7 @@ namespace ReservedItemSlotCore
                     indexInReservedHotbar = forceSlot;
                 newIndex = indexInReservedHotbar;
 
-                if (localPlayerController.ItemSlots[newIndex] == null && playerData.GetNumHeldReservedItems() > 0)
+                if (!LCVR_Compat.Loaded && localPlayerController.ItemSlots[newIndex] == null && playerData.GetNumHeldReservedItems() > 0)
                 {
                     for (newIndex = playerData.reservedHotbarStartIndex; newIndex < playerData.reservedHotbarEndIndexExcluded; newIndex++)
                     {
@@ -114,7 +116,7 @@ namespace ReservedItemSlotCore
                             break;
                     }
                 }
-                Plugin.Log("Focusing reserved hotbar slots. NewIndex: " + newIndex + " OldIndex: " + currentIndex + " ReservedStartIndex: " + ReservedPlayerData.localPlayerData.reservedHotbarStartIndex);
+                Plugin.LogVerbose("Focusing reserved hotbar slots. NewIndex: " + newIndex + " OldIndex: " + currentIndex + " ReservedStartIndex: " + ReservedPlayerData.localPlayerData.reservedHotbarStartIndex);
             }
 
             // Was in reserved, now not in reserved
@@ -124,7 +126,7 @@ namespace ReservedItemSlotCore
                 if (forceSlot != -1 && !playerData.IsReservedItemSlot(forceSlot))
                     indexInHotbar = forceSlot;
                 newIndex = indexInHotbar;
-                Plugin.Log("Unfocusing reserved hotbar slots. NewIndex: " + newIndex + " OldIndex: " + currentIndex + " ReservedStartIndex: " + ReservedPlayerData.localPlayerData.reservedHotbarStartIndex);
+                Plugin.LogVerbose("Unfocusing reserved hotbar slots. NewIndex: " + newIndex + " OldIndex: " + currentIndex + " ReservedStartIndex: " + ReservedPlayerData.localPlayerData.reservedHotbarStartIndex);
             }
 
             if (newIndex < 0)
